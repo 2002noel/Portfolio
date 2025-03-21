@@ -1,0 +1,288 @@
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  filter: none;
+  box-shadow: none;
+}
+
+.logo {
+  position: relative;
+  filter: none;
+  box-shadow: 0 0 0 0;
+  margin-left: 5%;
+  width: auto;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.matrix-text {
+  color: var(--primary-color) !important;
+  text-shadow: 0 0 10px rgba(0, 112, 243, 0.7);
+  filter: none;
+}
+
+.logo a {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+  z-index: 1;
+  box-shadow: none;
+}
+
+.matrix-effect {
+  position: absolute;
+  top: -20px;
+  left: -10%;
+  width: 120%;
+  height: calc(100% + 40px);
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+.binary-digit {
+  position: absolute;
+  color: var(--primary-color);
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: bold;
+  opacity: 0.35;
+  text-shadow: 0 0 8px rgba(0, 112, 243, 0.3);
+  transition: opacity 0.3s ease;
+  filter: none;
+}
+
+.binary-digit.animate {
+  animation: fallDown 2s infinite;
+}
+
+/* Randomly position binary digits across the container with varied speeds */
+.binary-digit:nth-child(1) { left: 2vw; top: 10%; }
+.binary-digit:nth-child(2) { left: 5vw; top: 35%; }
+.binary-digit:nth-child(3) { left: 8vw; top: 20%; }
+.binary-digit:nth-child(4) { left: 11vw; top: 70%; }
+.binary-digit:nth-child(5) { left: 14vw; top: 15%; }
+.binary-digit:nth-child(6) { left: 17vw; top: 65%; }
+.binary-digit:nth-child(7) { left: 20vw; top: 25%; }
+.binary-digit:nth-child(8) { left: 23vw; top: 80%; }
+.binary-digit:nth-child(9) { left: 26vw; top: 45%; }
+.binary-digit:nth-child(10) { left: 29vw; top: 30%; }
+.binary-digit:nth-child(11) { left: 32vw; top: 75%; }
+.binary-digit:nth-child(12) { left: 35vw; top: 40%; }
+.binary-digit:nth-child(13) { left: 38vw; top: 20%; }
+.binary-digit:nth-child(14) { left: 41vw; top: 60%; }
+.binary-digit:nth-child(15) { left: 44vw; top: 25%; }
+.binary-digit:nth-child(16) { left: 47vw; top: 70%; }
+.binary-digit:nth-child(17) { left: 50vw; top: 15%; }
+.binary-digit:nth-child(18) { left: 53vw; top: 55%; }
+.binary-digit:nth-child(19) { left: 56vw; top: 30%; }
+.binary-digit:nth-child(20) { left: 59vw; top: 50%; }
+.binary-digit:nth-child(21) { left: 62vw; top: 85%; }
+.binary-digit:nth-child(22) { left: 65vw; top: 10%; }
+.binary-digit:nth-child(23) { left: 68vw; top: 60%; }
+.binary-digit:nth-child(24) { left: 71vw; top: 35%; }
+.binary-digit:nth-child(25) { left: 74vw; top: 75%; }
+.binary-digit:nth-child(26) { left: 77vw; top: 25%; }
+.binary-digit:nth-child(27) { left: 80vw; top: 50%; }
+.binary-digit:nth-child(28) { left: 83vw; top: 15%; }
+.binary-digit:nth-child(29) { left: 86vw; top: 65%; }
+.binary-digit:nth-child(30) { left: 89vw; top: 40%; }
+.binary-digit:nth-child(31) { left: 92vw; top: 80%; }
+.binary-digit:nth-child(32) { left: 95vw; top: 20%; }
+.binary-digit:nth-child(33) { left: 98vw; top: 55%; }
+.binary-digit:nth-child(34) { left: 101vw; top: 30%; }
+.binary-digit:nth-child(35) { left: 104vw; top: 70%; }
+.binary-digit:nth-child(36) { left: 107vw; top: 25%; }
+.binary-digit:nth-child(37) { left: 110vw; top: 60%; }
+.binary-digit:nth-child(38) { left: 113vw; top: 40%; }
+.binary-digit:nth-child(39) { left: 116vw; top: 85%; }
+.binary-digit:nth-child(40) { left: 119vw; top: 15%; }
+.binary-digit:nth-child(41) { left: 122vw; top: 55%; }
+.binary-digit:nth-child(42) { left: 125vw; top: 30%; }
+.binary-digit:nth-child(43) { left: 128vw; top: 75%; }
+.binary-digit:nth-child(44) { left: 131vw; top: 45%; }
+.binary-digit:nth-child(45) { left: 134vw; top: 20%; }
+.binary-digit:nth-child(46) { left: 137vw; top: 65%; }
+.binary-digit:nth-child(47) { left: 140vw; top: 35%; }
+.binary-digit:nth-child(48) { left: 143vw; top: 10%; }
+.binary-digit:nth-child(49) { left: 146vw; top: 80%; }
+.binary-digit:nth-child(50) { left: 149vw; top: 50%; }
+
+/* Animation delays and durations */
+.binary-digit.animate:nth-child(1) { animation-delay: 0.1s; animation-duration: 1.2s; }
+.binary-digit.animate:nth-child(2) { animation-delay: 0.3s; animation-duration: 1.5s; }
+.binary-digit.animate:nth-child(3) { animation-delay: 0.5s; animation-duration: 1.3s; }
+.binary-digit.animate:nth-child(4) { animation-delay: 0.2s; animation-duration: 1.7s; }
+.binary-digit.animate:nth-child(5) { animation-delay: 0.4s; animation-duration: 1.2s; }
+.binary-digit.animate:nth-child(6) { animation-delay: 0.6s; animation-duration: 1.8s; }
+.binary-digit.animate:nth-child(7) { animation-delay: 0.3s; animation-duration: 1.4s; }
+.binary-digit.animate:nth-child(8) { animation-delay: 0.5s; animation-duration: 1.6s; }
+.binary-digit.animate:nth-child(9) { animation-delay: 0.2s; animation-duration: 1.3s; }
+.binary-digit.animate:nth-child(10) { animation-delay: 0.4s; animation-duration: 1.5s; }
+.binary-digit.animate:nth-child(11) { animation-delay: 0.6s; animation-duration: 1.2s; }
+.binary-digit.animate:nth-child(12) { animation-delay: 0.3s; animation-duration: 1.7s; }
+.binary-digit.animate:nth-child(13) { animation-delay: 0.5s; animation-duration: 1.3s; }
+.binary-digit.animate:nth-child(14) { animation-delay: 0.2s; animation-duration: 1.5s; }
+.binary-digit.animate:nth-child(15) { animation-delay: 0.4s; animation-duration: 1.8s; }
+.binary-digit.animate:nth-child(16) { animation-delay: 0.6s; animation-duration: 1.6s; }
+.binary-digit.animate:nth-child(17) { animation-delay: 0.3s; animation-duration: 1.2s; }
+.binary-digit.animate:nth-child(18) { animation-delay: 0.5s; animation-duration: 1.4s; }
+.binary-digit.animate:nth-child(19) { animation-delay: 0.2s; animation-duration: 1.6s; }
+.binary-digit.animate:nth-child(20) { animation-delay: 0.4s; animation-duration: 1.3s; }
+.binary-digit.animate:nth-child(21) { animation-delay: 0.7s; animation-duration: 1.5s; }
+.binary-digit.animate:nth-child(22) { animation-delay: 0.1s; animation-duration: 1.2s; }
+.binary-digit.animate:nth-child(23) { animation-delay: 0.3s; animation-duration: 1.7s; }
+.binary-digit.animate:nth-child(24) { animation-delay: 0.5s; animation-duration: 1.3s; }
+.binary-digit.animate:nth-child(25) { animation-delay: 0.7s; animation-duration: 1.5s; }
+.binary-digit.animate:nth-child(26) { animation-delay: 0.1s; animation-duration: 1.8s; }
+.binary-digit.animate:nth-child(27) { animation-delay: 0.3s; animation-duration: 1.4s; }
+.binary-digit.animate:nth-child(28) { animation-delay: 0.5s; animation-duration: 1.6s; }
+.binary-digit.animate:nth-child(29) { animation-delay: 0.7s; animation-duration: 1.2s; }
+.binary-digit.animate:nth-child(30) { animation-delay: 0.1s; animation-duration: 1.5s; }
+.binary-digit.animate:nth-child(31) { animation-delay: 0.4s; animation-duration: 1.7s; }
+.binary-digit.animate:nth-child(32) { animation-delay: 0.2s; animation-duration: 1.3s; }
+.binary-digit.animate:nth-child(33) { animation-delay: 0.5s; animation-duration: 1.8s; }
+.binary-digit.animate:nth-child(34) { animation-delay: 0.3s; animation-duration: 1.6s; }
+.binary-digit.animate:nth-child(35) { animation-delay: 0.6s; animation-duration: 1.2s; }
+.binary-digit.animate:nth-child(36) { animation-delay: 0.4s; animation-duration: 1.5s; }
+.binary-digit.animate:nth-child(37) { animation-delay: 0.7s; animation-duration: 1.4s; }
+.binary-digit.animate:nth-child(38) { animation-delay: 0.1s; animation-duration: 1.3s; }
+.binary-digit.animate:nth-child(39) { animation-delay: 0.4s; animation-duration: 1.6s; }
+.binary-digit.animate:nth-child(40) { animation-delay: 0.2s; animation-duration: 1.5s; }
+.binary-digit.animate:nth-child(41) { animation-delay: 0.5s; animation-duration: 1.7s; }
+.binary-digit.animate:nth-child(42) { animation-delay: 0.3s; animation-duration: 1.2s; }
+.binary-digit.animate:nth-child(43) { animation-delay: 0.6s; animation-duration: 1.8s; }
+.binary-digit.animate:nth-child(44) { animation-delay: 0.2s; animation-duration: 1.4s; }
+.binary-digit.animate:nth-child(45) { animation-delay: 0.5s; animation-duration: 1.6s; }
+.binary-digit.animate:nth-child(46) { animation-delay: 0.3s; animation-duration: 1.3s; }
+.binary-digit.animate:nth-child(47) { animation-delay: 0.6s; animation-duration: 1.7s; }
+.binary-digit.animate:nth-child(48) { animation-delay: 0.1s; animation-duration: 1.2s; }
+.binary-digit.animate:nth-child(49) { animation-delay: 0.4s; animation-duration: 1.5s; }
+.binary-digit.animate:nth-child(50) { animation-delay: 0.7s; animation-duration: 1.8s; }
+
+@keyframes fallDown {
+  0% {
+    transform: translateY(0);
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 0.8;
+    text-shadow: 0 0 8px rgba(0, 112, 243, 0.7);
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  margin-left: 2rem;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 0.3rem 0;
+}
+
+.navigation a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.navigation a:hover {
+  color: var(--primary-color);
+}
+
+.navigation a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .logo {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .matrix-effect {
+    left: -5%;
+    width: 110%;
+  }
+  
+  .navigation {
+    margin-top: 1rem;
+  }
+  
+  .navigation ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .navigation li {
+    margin: 0.5rem 1rem;
+  }
+}
+
+/* Remove tap highlight on mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Ensure the logo area has no blue highlights */
+.logo a, .logo h1, .matrix-effect, .binary-digit {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+} 
