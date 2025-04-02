@@ -1,31 +1,28 @@
 import React from 'react';
 import '../styles/Projects.css';
+import IOSAPP from '../assets/IOSAPP.png';
+import FarmGameVideo from '../assets/GameDemo.mp4';
 
 const projectsData = [
   {
     id: 1,
-    title: 'E-commerce Website',
-    description: 'A fully responsive e-commerce website with product listings, shopping cart, and checkout functionality.',
-    technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
-    image: 'project1.jpg',
+    title: 'IOS App',
+    description: 'A mobile application similar to Yelp that helps users see the accessbility of a location.',
+    technologies: ['SwiftUI', 'MapBox', 'FireBase'],
+    image: IOSAPP,
+    video: null,
     link: '#'
   },
   {
     id: 2,
-    title: 'Task Management App',
-    description: 'A task management application that helps users organize their daily activities and track progress.',
-    technologies: ['React', 'Redux', 'Firebase'],
-    image: 'project2.jpg',
-    link: '#'
-  },
-  {
-    id: 3,
-    title: 'Weather Dashboard',
-    description: 'A weather dashboard that provides real-time weather information and forecasts for different locations.',
-    technologies: ['JavaScript', 'HTML/CSS', 'Weather API'],
-    image: 'project3.jpg',
+    title: 'Farm Inc.',
+    description: 'A barebones farmning game that allows users to plant crops, harvest them, and also automate the process with added features',
+    technologies: ['C#', 'Unity'],
+    image: null,
+    video: FarmGameVideo,
     link: '#'
   }
+  
 ];
 
 const Projects = () => {
@@ -36,8 +33,13 @@ const Projects = () => {
         {projectsData.map(project => (
           <div className="project-card" key={project.id}>
             <div className="project-image">
-              {/* Replace with actual image later */}
-              <div className="image-placeholder" alt={project.title}></div>
+              {project.video ? (
+                <video controls className="project-video">
+                  <source src={project.video} type="video/mp4" />
+                </video>
+              ) : (
+              <img src={project.image} alt={project.title} />
+              )}
             </div>
             <div className="project-info">
               <h3>{project.title}</h3>
@@ -47,7 +49,7 @@ const Projects = () => {
                   <span key={index} className="tech-tag">{tech}</span>
                 ))}
               </div>
-              <a href={project.link} className="btn project-btn">View Project</a>
+              
             </div>
           </div>
         ))}
@@ -56,4 +58,4 @@ const Projects = () => {
   );
 };
 
-export default Projects; 
+export default Projects;

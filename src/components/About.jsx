@@ -8,16 +8,9 @@ const About = () => {
       <div className="about-content">
         <div className="about-text">
           <p>
-            I'm a passionate web developer with expertise in creating dynamic, 
-            user-friendly websites and applications. With a strong foundation in 
-            frontend and backend technologies, I enjoy bringing ideas to life in 
-            the digital space.
+            I'm a passionate programmer with a interest in web, mobile, and game development.
           </p>
-          <p>
-            My journey in web development began several years ago, and since then, 
-            I've worked on various projects that have helped me refine my skills and 
-            expand my knowledge in modern web technologies.
-          </p>
+          
         </div>
         <div className="skills">
           <h3>My Skills</h3>
@@ -25,7 +18,7 @@ const About = () => {
             <div className="skill">
               <span>HTML/CSS</span>
               <div className="skill-bar">
-                <div className="skill-level" style={{ width: "90%" }}></div>
+                <div className="skill-level" style={{ width: "50%" }}></div>
               </div>
             </div>
             <div className="skill">
